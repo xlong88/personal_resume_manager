@@ -10,7 +10,7 @@ LATEXMK=latexmk
 LATEXMKOPT=-pdf
 CONTINUOUS=-pvc
 
-MAIN=long_gong_cv
+MAIN=longon_cv
 SOURCES=$(MAIN).tex Makefile 
 #FIGURES := $(shell find figures/* images/* -type f)
 
