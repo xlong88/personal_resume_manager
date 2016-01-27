@@ -30,7 +30,7 @@
 \usepackage{amsmath,amsfonts,amsthm}     % Math packages
 \usepackage{graphicx}                    % Enable pdflatex
 \usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
-\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage[top=0.5in, bottom=1.0in, left=0.5in, right=0.5in]{geometry}
 	%\textheight=700px                    % Saving trees ;-)
 
 \usepackage{url}
@@ -38,9 +38,6 @@
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
 
-
-
-%\cfoot{Page \thepage \hspace{1pt} of 2}
 %%% Custom sectioning (sectsty package)
 %%% ------------------------------------------------------------
 \usepackage{sectsty}
@@ -53,7 +50,7 @@
 %%% ------------------------------------------------------------
 \newlength{\spacebox}
 \settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{0.8em}}		% Vertical space macro
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name
 		\begin{center}\Huge \usefont{OT1}{phv}{b}{n} #1\end{center}
@@ -125,16 +122,18 @@
 \sepspace
 
 \EducationEntry{B.E., Electronic Information Engineering}{2008 - 2012}{University of Science and Technology of China}{}
-\vspace{-10pt}
+
 
 \NewPart{Objective}{}
-Intern Scientist, Yahoo Labs (Summer 2016)
+Software Development Engineer/SDET Intern (Summer 2016)
+
 %%% Work experience
 %%% ------------------------------------------------------------
-\NewPart{Research experience}{}
-\EducationEntry{Graduate Research Assistant}{2015.8 - Now}{Georgia Institute of Technology, Full-Time}{Mentor: Prof. Jim Xu\\Assist in designing a novel measurement algorithm which combines sampling and streaming to capture the major statistical properties of online social networking graphs, which improves the accuracy up to one magnitude.}
-\EducationEntry{Graduate Research Assistant}{2012.9 - 2015.6}{University of Science and Technology of China, Full-Time}{Mentor: Prof. Zuqing Zhu\\Design efficient virtual optical network embedding algorithms, which are among the earliest ones. Build a software defined networking (SDN) based network virtualization control-plane platform, which is among the earliest ones that support elastic optical network. (ICC 2013, GLOBECOM 2013)}
-\EducationEntry{Visiting Undergraduate Researcher}{2012.2 - 2012.6}{NanYang Technological University, Full-Time}{Mentor: Prof. Yonggang Wen\\Designed a novel virtual network embedding algorithm, which increases the network utilization and decreases the time complexity. (INFOCOM 2014)}
+\NewPart{Programming experience}{}
+\EducationEntry{Citation Management System}{2016.1}{PHP (phpBibLib), JavaScript (jQuery, Ajax)}{Develop a citation management system for academic blog writing in Jekyll based Github Pages, which makes citation almost as easy as in Latex.}
+\EducationEntry{Big Graph Miner}{2015.8 - 2015.11}{C++, Python}{Design and implement a novel measurement algorithm which combines sampling and streaming to capture the major statistical properties of online social networking graphs. It improves the accuracy up to one magnitude.}
+\EducationEntry{Network Virtualization Control-Plane Platform}{2014.12 - 2015.03}{Python (Django, POX), JavaScript, Matlab}{Design and develop a openflow-based network virtualization control-plane platform, which provides web-based GUI to help users to create, and manage their virtual networks.}
+%\EducationEntry{Book Library System}{2014.11}{PHP, Javascript, Bootstrap}{Develop a book library system plugin for the Wiki hosted by MediaWiki, which supports book adding, viewing, booking, and returning, making it much easier to manage the public books in our lab.}
 
 %%% Honors
 \NewPart{Honors and Awards}
@@ -144,12 +143,12 @@ Intern Scientist, Yahoo Labs (Summer 2016)
 \end{itemize}
 %%% Publication
 %%% ------------------------------------------------------------
-%\NewPart{Selected Publication}
-%\begin{itemize}
-%\item \textbf{Long Gong}, and Zuqing Zhu, ``Virtual Optical Network Embedding (VONE) over Elastic Optical Networks," IEEE/OSA Journal of Lightwave Technology, vol. 32, no. 3, pp. 450-460, Feb. 2014.
-%\item \textbf{Long Gong}, Yonggang Wen, Zuqing Zhu, and Tony Lee, ``Toward Profit-Seeking Virtual Network Embedding Algorithm via Global Resource Capacity," in Proceedings of IEEE International Conference on Computer Communications
-%(INFOCOM), pp. 1-9, Apr. 2014.
-%\end{itemize}
+% \NewPart{Selected Publication}
+% \begin{itemize}
+% \item \textbf{Long Gong}, and Zuqing Zhu, ``Virtual Optical Network Embedding (VONE) over Elastic Optical Networks," IEEE/OSA Journal of Lightwave Technology, vol. 32, no. 3, pp. 450-460, Feb. 2014.
+% \item \textbf{Long Gong}, Yonggang Wen, Zuqing Zhu, and Tony Lee, ``Toward Profit-Seeking Virtual Network Embedding Algorithm via Global Resource Capacity," in Proceedings of IEEE International Conference on Computer Communications
+% (INFOCOM), pp. 1-9, Apr. 2014.
+% \end{itemize}
 
 %%% Skills
 %%% ------------------------------------------------------------
