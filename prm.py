@@ -8,14 +8,18 @@ from sys import platform as _platform
 if _platform == "linux" or _platform == "linux2":
    # linux
    clean = 'rm'
+   pathsplit = '/'
    
 elif _platform == "darwin":
    # MAC OS X
    clean = 'rm'
+   pathsplit = '/'
    
 elif _platform == "win32":
    # Windows
    clean = 'del'
+   pathsplit = '\\'
+
    
 
 # Command Line Description
@@ -76,7 +80,7 @@ else:
 	for f in os.listdir(searchPath):
 		if f.endswith('.json'):
 			counter += 1
-			inputVars = searchPath + '/' + f
+			inputVars = searchPath + pathsplit + f
 			if counter > 1:
 				print 'Error: there are more than one JSON files in the path [%s], therefore, you have to specify which one is the input-variable file' % searchPath
 				exit(1)	
@@ -107,7 +111,7 @@ for comp in confs['target']:
 		'put_ref': confs['show_ref']
 	}
 	# Finally, process the template to produce our final text.
-	outputSubDir = outputDir + '\\' + comp["id"]
+	outputSubDir = outputDir + pathsplit + comp["id"]
 	try:
 		os.stat(outputSubDir)
 	except:
@@ -115,7 +119,7 @@ for comp in confs['target']:
 
 	outputText = template.render(templateVars)
 
-	output = outputSubDir + '\\' + outputFilePrefix + '_' + comp["id"] + ".tex"
+	output = outputSubDir + pathsplit + outputFilePrefix + '_' + comp["id"] + ".tex"
 	with open(output,"w") as f:
 		f.write(outputText)
 
@@ -125,10 +129,10 @@ for comp in confs['target']:
 	rExts = ['*.dvi', '*.out', '*.log', '*.aux', '*.ps', '*.idx', '*.lof', '*.ind', '*.blg', '*.toc', '*.ilg', '*~', '*.synctex']
 
 	for ext in rExts:
-		print clean + ' ' + outputSubDir + '\\' + ext
-		os.system(clean + ' ' + outputSubDir + '\\' + ext)
+		print clean + ' ' + outputSubDir + pathsplit + ext
+		os.system(clean + ' ' + outputSubDir + pathsplit + ext)
 	
-	print '%s was generated successfully' % (outputSubDir + '\\' + outputFilePrefix + '_' + comp["id"] + '.pdf')
+	print '%s was generated successfully' % (outputSubDir + pathsplit + outputFilePrefix + '_' + comp["id"] + '.pdf')
 
 
 	
