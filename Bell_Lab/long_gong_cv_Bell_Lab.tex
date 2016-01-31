@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX:
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[applemac]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage[top=0.5in, bottom=1.0in, left=0.5in, right=0.5in]{geometry}
+	%\textheight=700px                    % Saving trees ;-)
+
+\usepackage{url}
+\usepackage{multicol}
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+\input{customized_commands}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Long Gong}
+%\MySlogan{Curriculum Vitae}
+
+\sepspace
+
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Address}{266 Ferst Dr, Atlanta, GA 30332}
+\PersonalEntry{Mail}{\url{gonglong@gatech.edu}}
+
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry{PhD, Computer Science}{2015 - Now}{Georgia Institute of Technology}{\textbf{GPA}: 4.0/4.0\\\textbf{Advisor}: Prof. Jim Xu\\\textbf{Research Focus}: Data Streaming, Network Algorithmics for Software Defined Networking}
+
+\vspace*{0.6em}
+
+
+\EducationEntry{M.E., Communication and Information Systems}{2012 - 2015}{University of Science and Technology of China}{\textbf{GPA}: 3.81/4.3\\\textbf{Advisor}: Prof. Zuqing Zhu\\\textbf{Research Focus}: Elastic Optical Network, Network Virtualization}
+
+\vspace*{0.6em}
+
+
+\EducationEntry{B.E., Electronic Information Engineering}{2008 - 2012}{University of Science and Technology of China}{\textbf{GPA}: 3.75/4.3}
+\vspace{-10pt}
+
+
+
+
+
+%%% Research experience
+%%% ------------------------------------------------------------
+\NewPart{Research experience}{}
+\EducationEntry{Graduate Research Assistant}{2015.8 - Now}{Georgia Institute of Technology, Full-Time}{Mentor: Prof. Jim Xu\\Assist in designing a novel measurement algorithm which combines sampling and streaming to capture the major statistical properties of online social networking graphs, which improves the accuracy up to one magnitude.}
+\EducationEntry{Graduate Research Assistant}{2012.9 - 2015.6}{University of Science and Technology of China, Full-Time}{Mentor: Prof. Zuqing Zhu\\Design efficient virtual optical network embedding algorithms, which are among the earliest ones. Build a software defined networking (SDN) based network virtualization control-plane platform, which is among the earliest ones that support elastic optical network. (ICC 2013, GLOBECOM 2013)}
+\EducationEntry{Visiting Undergraduate Researcher}{2012.2 - 2012.6}{NanYang Technological University, Full-Time}{Mentor: Prof. Yonggang Wen\\Designed a novel virtual network embedding algorithm, which increases the network utilization and decreases the time complexity. (INFOCOM 2014)}
+
+
+%%% Honors
+\NewPart{Honors and Awards}
+\begin{itemize}
+\item Best Paper Award, GLOBECOM 2013
+\item National Scholarship (for Master Students) 2013, awarded to top 5\% students
+\end{itemize}
+
+
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+\SkillsEntry{Programming}{\textsc{C++}, \textsc{Python}, \textsc{Matlab}, \LaTeX, \textsc{PHP}, \textsc{Javascript}}
+
+
+%%% References
+%%% ------------------------------------------------------------
+
+\end{document}
